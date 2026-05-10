@@ -2,6 +2,7 @@ import { error } from "node:console";
 import app from "./src/app";
 import { ConnectDB } from "./src/config/database";
 
+
 import dns from "node:dns/promises"
 dns.setServers([
     '1.1.1.1',
@@ -19,3 +20,4 @@ ConnectDB().then(()=>{
     console.error("Failed to start server",error)
     process.exit(1)
 })
+
