@@ -1,3 +1,4 @@
+import { error } from "node:console";
 import app from "./src/app";
 import { ConnectDB } from "./src/config/database";
 
@@ -13,4 +14,8 @@ ConnectDB().then(()=>{
     app.listen(PORT,()=>{
     console.log(`Server is running on:${PORT}`)
 })
+})
+.catch((error)=>{
+    console.error("Failed to start server",error)
+    process.exit(1)
 })
