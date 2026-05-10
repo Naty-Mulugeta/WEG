@@ -23,7 +23,7 @@ export const protectRoute = [
       next();
     } catch (error) {
       res.status(500);
-    //   next(error);
+      next(error);
     }
   },
 ];
