@@ -21,7 +21,8 @@ app.use("/api/chat",chatRoutes)
 app.use("/api/message",messageRoutes)
 app.use("/api/user",userRoutes)
 
-// error handlers must come after all the routes and other middlewares so they can catch errors passed with next(err) or thrown inside async handlers.
+// error handlers must come after all the routes and other middlewares so they
+// can catch errors passed with next(err) or thrown inside async handlers.
 app.use(errorHandler);
 
 export default app
